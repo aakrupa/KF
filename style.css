@@ -154,7 +154,7 @@ p {
 .logo img {
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Caso o logotipo seja redondo */
+    object-fit: contain; /* Mantém a proporção original da espiral sem distorcer */
 }
 
 .logo-text {
@@ -263,13 +263,9 @@ p {
     height: auto;
     border-radius: 2.5rem;
     box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-    transform: scale(0.9) rotate(-3deg);
-    transition: transform var(--transition-smooth);
+    /* REMOVIDOS: transform: scale(0.9) rotate(-3deg); */
 }
 
-.hero-image:hover {
-    transform: scale(1) rotate(0deg);
-}
 
 /* --- 6. Botões --- */
 .btn-primary {
