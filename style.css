@@ -151,8 +151,9 @@ p {
 
 /* LOGOTIPO AUMENTADO */
 .logo-full {
-    height: 110px; /* Aumentei para ficar bem legível */
+    height: 160px; /* Aumentei drasticamente para ficar bem visível */
     width: auto;
+    max-width: 100%; /* Garante que não vaze para fora da tela */
     object-fit: contain;
     transition: opacity var(--transition-fast);
 }
@@ -161,6 +162,12 @@ p {
     opacity: 0.8;
 }
 
+/* Ajuste de responsividade para o logotipo no celular */
+@media (max-width: 768px) {
+    .logo-full {
+        height: 80px; /* Ainda grande, mas reduzido para não quebrar o menu mobile */
+    }
+}
 .nav-links {
     display: flex;
     gap: 2rem;
