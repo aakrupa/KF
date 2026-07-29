@@ -143,12 +143,21 @@ p {
     align-items: center;
 }
 
-.logo {
+.logo-link {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
     text-decoration: none;
-    color: var(--text-dark);
+}
+
+.logo-full {
+    height: 60px; /* Ajuste conforme o tamanho real da logomarca */
+    width: auto;
+    object-fit: contain;
+    transition: opacity var(--transition-fast);
+}
+
+.logo-full:hover {
+    opacity: 0.8;
 }
 
 .logo img {
@@ -296,8 +305,49 @@ p {
 }
 
 .sobre-image-wrapper {
+    position: relative;
     border-radius: 2rem;
     overflow: hidden;
+    min-height: 400px; /* Garante que a seção tenha altura */
+    background-color: var(--beige-dark);
+}
+
+.texture-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.25; /* Deixa o padrão sutil e elegante, preenchendo sem roubar a atenção */
+    z-index: 1;
+}
+
+.submarca-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px; /* Tamanho da submarca redonda */
+    height: auto;
+    z-index: 2;
+    opacity: 0.8;
+    /* Se quiser um efeito de "pulsar" bem sutil na submarca, descomente as linhas abaixo: */
+    /* animation: pulse-submarca 6s infinite ease-in-out; */
+}
+
+@keyframes pulse-submarca {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    50% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; }
+}
+
+/* Ajuste de responsividade para a logomarca no celular */
+@media (max-width: 768px) {
+    .logo-full {
+        height: 45px; /* Fica um pouco menor no celular */
+    }
 }
 
 /* --- 8. Serviços Section --- */
