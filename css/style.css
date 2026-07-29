@@ -1,6 +1,0 @@
-:root{--primary:#807b73;--bg:#e4e0d1;--accent:#a4bcab;--neutral:#c1c5be;--sand:#d4ccb4}
-body{margin:0;font-family:Poppins,sans-serif;background:var(--bg);color:#3d3b37}
-h1,h2,nav,.btn{font-family:"Instrument Sans",sans-serif}.btn{background:var(--primary);color:#fff;padding:.8rem 1.2rem;border-radius:12px;text-decoration:none}
-header{position:sticky;top:0;background:#ffffffdd;backdrop-filter:blur(10px)}
-nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 5%}
-section{padding:5rem 5%;max-width:1200px;margin:auto}
