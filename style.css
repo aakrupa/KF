@@ -305,7 +305,7 @@ p {
     width: 100%;
     height: 100%;
     /* Certifique-se que o nome do arquivo abaixo bata com o da sua pasta */
-    background-image: url('assets/KF_pattern.png'); 
+    background-image: url('assets/KF-pattern.png'); 
     background-size: auto;
     background-repeat: repeat;
     background-position: center;
