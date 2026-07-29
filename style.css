@@ -151,7 +151,7 @@ p {
 
 /* LOGOTIPO AUMENTADO */
 .logo-full {
-    height: 160px; /* Aumentei drasticamente para ficar bem visível */
+    height: 300px; /* Aumentei drasticamente para ficar bem visível */
     width: auto;
     max-width: 100%; /* Garante que não vaze para fora da tela */
     object-fit: contain;
