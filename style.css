@@ -149,8 +149,9 @@ p {
     text-decoration: none;
 }
 
+/* LOGOTIPO AUMENTADO */
 .logo-full {
-    height: 60px; /* Ajuste conforme o tamanho real da logomarca */
+    height: 110px; /* Aumentei para ficar bem legível */
     width: auto;
     object-fit: contain;
     transition: opacity var(--transition-fast);
@@ -158,19 +159,6 @@ p {
 
 .logo-full:hover {
     opacity: 0.8;
-}
-
-.logo img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain; /* Mantém a proporção original da espiral sem distorcer */
-}
-
-.logo-text {
-    font-family: var(--font-secondary);
-    font-weight: 600;
-    font-size: 1.25rem;
-    color: var(--text-dark);
 }
 
 .nav-links {
@@ -302,33 +290,103 @@ p {
     box-shadow: 0 8px 12px rgba(164, 188, 171, 0.4);
 }
 
-/* --- 7. Sobre Section --- */
-.sobre-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.sobre-image-wrapper {
+/* --- 7. Sobre Section (Nova versão com fundo de pattern) --- */
+#sobre {
     position: relative;
-    border-radius: 2rem;
     overflow: hidden;
-    min-height: 450px;
-    background-color: var(--beige-dark);
 }
 
-.texture-overlay {
+/* Aplicando o pattern como fundo de tela inteiro */
+#sobre::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: 200px 200px; /* Ajuste o tamanho do padrão aqui se ele for muito pequeno ou muito grande */
-    background-repeat: repeat; /* Repete o padrão para preencher todo o quadrado */
+    /* Certifique-se que o nome do arquivo abaixo bata com o da sua pasta */
+    background-image: url('assets/KF_pattern.png'); 
+    background-size: auto;
+    background-repeat: repeat;
     background-position: center;
-    opacity: 0.15; /* Aumentei levemente para aparecer melhor */
+    opacity: 0.25; /* Ajuste aqui se quiser o padrão mais forte ou mais fraco */
+    z-index: 0;
+}
+
+.sobre-wrapper {
+    position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-text-box {
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.92); /* Fundo translúcido para leitura */
+    padding: 4.5rem;
+    border-radius: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+    text-align: center;
+}
+
+.sobre-text-box p {
+    max-width: 100%; /* Permite que o texto ocupe o espaço do cartão */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsividade da seção sobre e logo */
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 7rem 0 3rem 0;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-image-wrapper {
+        flex: none;
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-full {
+        height: 60px; /* Reduz no celular para não quebrar o layout */
+    }
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right var(--transition-smooth);
+        box-shadow: -4px 0 15px rgba(0,0,0,0.05);
+        z-index: 999;
+    }
+    .nav-links.open {
+        right: 0;
+    }
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+    .sobre-text-box {
+        padding: 2rem; /* Espaço interno menor no celular */
+        margin: 0 1.5rem;
+        border-radius: 1.5rem;
+    }
 }
 
 /* --- 8. Serviços Section --- */
