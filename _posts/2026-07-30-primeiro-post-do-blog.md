@@ -1,10 +1,9 @@
 ---
 layout: default
-title: Guia rápido para escrever no Blog
+title: Guia rápido para escrever
 date: 2026-07-30
 ---
 
-Escrever posts aqui é muito mais simples do que parece! Vou te ensinar o básico do Markdown.
 
 ## **Negrito e *Itálico***
 Para deixar uma palavra em **Negrito**, coloque dois asteriscos antes e depois: `**Negrito**`.
