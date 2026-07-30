@@ -592,3 +592,16 @@ footer p {
         z-index: 1001;
     }
 }
+/* --- 14. Correção de padding para cabeçalho fixo --- */
+/* Garante que o conteúdo principal nunca fique por cima do menu fixo */
+.main-content {
+    padding-top: 150px; /* Compensa a altura do header (100px logo + 32px padding) */
+    min-height: 100vh;
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+    .main-content {
+        padding-top: 110px; /* Compensa a altura do header (60px logo + 32px padding) */
+    }
+}
