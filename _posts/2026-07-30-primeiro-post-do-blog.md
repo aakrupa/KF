@@ -1,35 +1,27 @@
 ---
 layout: default
-title: Primeiro post exemplo
+title: Guia rápido para escrever no Blog
 date: 2026-07-30
 ---
 
+Escrever posts aqui é muito mais simples do que parece! Vou te ensinar o básico do Markdown.
 
-* Para deixar uma palavra em **Negrito**, basta colocar dois asteriscos antes e depois da palavra: `**Negrito**`.
-* Para deixar uma palavra em *Itálico*, basta colocar um asterisco antes e depois: `*Itálico*`.
+## **Negrito e *Itálico***
+Para deixar uma palavra em **Negrito**, coloque dois asteriscos antes e depois: `**Negrito**`.
+Para deixar em *Itálico*, coloque um asterisco: `*Itálico*`.
+Ou até mesmo ***os dois combinados***!
 
-Você também pode combinar os dois, como: ***Negrito e Itálico juntos***.
+## Como adicionar imagens
+No Markdown, as imagens são inseridas assim:
+`![Descrição da imagem]({{ '/assets/sua-imagem.jpg' | absolute_url }})`
 
-## Como incluir imagens
-
-Para inserir uma imagem dos nossos arquivos do site, usamos o seguinte código:
-
-`![Descrição da imagem]({{ site.baseurl }}/caminho/para/a/imagem.jpg)`
-
-**Veja um exemplo prático**, usando a nossa própria foto dos blocos de madeira que está na pasta `assets`:
-
-![Blocos de madeira representando o aprendizado]({{ site.baseurl }}/assets/blocos-madeira-2.jpg)
-
-## Estruturando o texto
-
-- Você pode criar listas com tópicos usando apenas um traço `-` (como essa lista).
-- Para criar títulos, use `##` para subtítulos, `###` para títulos menores, ou `#` para títulos principais.
+Olha só um exemplo usando uma imagem que já está no seu acervo:
+![Blocos de madeira]({{ '/assets/blocos-madeira-2.jpg' | absolute_url }})
 
 ## Links
-
-Para colocar um link (como o do seu WhatsApp), basta usar colchetes para o texto e parênteses para o link:
-`[Meu WhatsApp](https://wa.me/5541997943221)`
+Para criar links, use a sintaxe: `[Texto do link](URL)`.
+Exemplo: [Meu perfil no LinkedIn](https://www.linkedin.com)
 
 ---
 
-Pronto! O Markdown é simples, rápido e vai deixar seus posts com um aspecto super profissional sem você precisar mexer em código HTML.
+É só salvar esse arquivo, fazer o `git push` e ele aparecerá no seu site com o mesmo visual elegante do resto!
