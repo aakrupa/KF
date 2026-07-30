@@ -1,5 +1,8 @@
 title: Kriscieli Fonsaca
 description: Psicopedagoga Clínica e Institucional
-baseurl: "" # Deixe vazio para o site principal do GitHub Pages
-url: "https://aakrupa.github.io/KF" # Ou o seu domínio final
+baseurl: "/KF"            # <-- O nome do seu repositório
+url: "https://aakrupa.github.io"
 markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
