@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.description }}">
+    <meta name="theme-color" content="#a4bcab">
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Caminho absoluto para o CSS -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header id="header" role="banner" aria-label="Menu de navegação principal">
+        <nav class="container" aria-label="Navegação primária">
+            <a href="/" class="logo-link">
+                <img src="/assets/KF-Logomarca-d-agua-retangular.png" alt="Logotipo Kriscieli Fonsaca Pedagogia" class="logo-full">
+            </a>
+            
+            <ul class="nav-links" id="nav-links" role="menubar">
+                <li role="none"><a href="/#sobre" role="menuitem">Sobre</a></li>
+                <li role="none"><a href="/#servicos" role="menuitem">Serviços</a></li>
+                <li role="none"><a href="/#diferenciais" role="menuitem">Diferenciais</a></li>
+                <li role="none"><a href="/#contato" role="menuitem">Contato</a></li>
+                <!-- NOVO LINK DO BLOG -->
+                <li role="none"><a href="/blog" role="menuitem">Blog</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu mobile" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- O conteúdo de cada página será injetado aqui pelo Jekyll -->
+        {{ content }}
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container footer-content">
+            <p>&copy; 2026 Kriscieli Fonsaca. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5541997943221?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Entre em contato pelo WhatsApp">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="white">...</svg>
+    </a>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo da página">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" ...>...</svg>
+    </button>
+
+    <!-- Caminho absoluto para o JS -->
+    <script src="/script.js"></script>
+</body>
+</html>
