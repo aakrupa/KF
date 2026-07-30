@@ -11,23 +11,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- CAMINHO ABSOLUTO CORRETO -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+    <!-- CORREÇÃO: absolute_url garante o caminho completo com o /KF -->
+    <link rel="stylesheet" href="{{ '/style.css' | absolute_url }}">
 </head>
 <body>
 
     <header id="header" role="banner">
         <nav class="container">
-            <a href="{{ site.baseurl }}/" class="logo-link">
-                <img src="{{ site.baseurl }}/assets/KF-Logomarca-d-agua-retangular.png" alt="Logotipo Kriscieli" class="logo-full">
+            <a href="{{ '/' | absolute_url }}" class="logo-link">
+                <img src="{{ '/assets/KF-Logomarca-d-agua-retangular.png' | absolute_url }}" alt="Logotipo Kriscieli" class="logo-full">
             </a>
             
             <ul class="nav-links" id="nav-links">
-                <li><a href="{{ site.baseurl }}/#sobre">Sobre</a></li>
-                <li><a href="{{ site.baseurl }}/#servicos">Serviços</a></li>
-                <li><a href="{{ site.baseurl }}/#diferenciais">Diferenciais</a></li>
-                <li><a href="{{ site.baseurl }}/#contato">Contato</a></li>
-                <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+                <li><a href="{{ '/' | absolute_url }}#sobre">Sobre</a></li>
+                <li><a href="{{ '/' | absolute_url }}#servicos">Serviços</a></li>
+                <li><a href="{{ '/' | absolute_url }}#diferenciais">Diferenciais</a></li>
+                <li><a href="{{ '/' | absolute_url }}#contato">Contato</a></li>
+                <li><a href="{{ '/blog' | absolute_url }}">Blog</a></li>
             </ul>
 
             <button class="hamburger" id="hamburger">
@@ -58,7 +58,7 @@
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
 
-    <!-- JS -->
-    <script src="{{ site.baseurl }}/script.js"></script>
+    <!-- CORREÇÃO: absolute_url no JS -->
+    <script src="{{ '/script.js' | absolute_url }}"></script>
 </body>
 </html>
